@@ -1,0 +1,125 @@
+<html>
+	
+<head>
+
+
+<script>
+function show()
+{
+	alert("test");
+	//document.getElementById("other").style.display="block"; 
+}
+
+function confirm()
+{
+	if(document.getElementById("passwd").value == document.getElementById("confirmpwd").value)
+		alert("Passwords Match");
+	else
+		alert("Error: Passwords Don't Match");
+	educhecked();
+	skillchecked();
+		
+}
+		
+function dob()
+{
+	alert("document.getElementById("dob").value");
+}
+		
+function educhecked()
+{
+	if(document.getElementById("HS").checked)
+		alert("You have a HS degree");
+	if(document.getElementById("BS").checked)
+		alert("You have a BS degree");
+	if(document.getElementById("MS").checked)
+		alert("You have an MS degree");
+	if(document.getElementById("PhD").checked)
+		alert("You have a PhD degree");
+}
+		
+function skillchecked()
+{
+	if(document.getElementById("C++").checked)
+		alert("You know C++");
+	if(document.getElementById("Py").checked)
+		alert("You know Python");
+	if(document.getElementById("JS").checked)
+		alert("You know Javascript");
+	if(document.getElementById("HTML").checked)
+		alert("You know HTML");
+}
+
+</head>
+
+</script>
+<body>
+	<center>
+<h1>Signup Form </h1>
+	<table style="border-collapse: collapse;" bgcolor="#d0d6d6" border="1" align="center" width=50%>
+		<tr>
+				<td width=15%> First Name: </td>
+				<td width=35%> <input type="text" name="firstname" id="firstname" /> </td>
+		</tr>
+		<tr>
+				<td width=15%> Last Name: </td>
+				<td width=35%> <input type="text" name="lastname" id="lastname" /> </td>
+		</tr>
+		<tr>
+				<td width=15%> Gender: </td>
+				<td width=35%> <select id="gender" name="gender">
+								<option value="M">Male</option>
+								<option value="F">Female</option>
+								</select> </td>
+		</tr>
+		<tr>
+				<td width=15%> Date of Birth: </td>
+				<td width=35%> <input type="date" name="dob" id="dob" /> </td>
+		</tr>
+		<tr>
+				<td width=15%> Education: </td>
+				<td width=35%> <input type=checkbox id="HS" name="HS" value="HS"> Highschool
+							<input type=checkbox id="BS" name="BS" value="BS" /> BS 
+							<input type=checkbox id="MS" name="MS" value="MS" /> MS 
+							<input type=checkbox id="PhD" name="PhD" value="Doctorate" /> PhD </td>
+		</tr>
+		<tr>
+				<td width=15%> Specialization: </td>
+				<td width=35%>  <input type="radio" id="CS" name="specialization" /> Computer Science 
+							<input type="radio" id="BSME" name="specialization" /> Mechanical Engineering 
+							<input type="radio" id="BSEE" name="specialization" /> Electrical Engineering 
+							<input type="radio" id="CYB" name="specialization" /> Cybersecurity 
+							<input type="radio" id="other_box" name="specialization" onclick="javascript:show()"/> Other 
+							<input style="display:none" type="text" name="other" id="other"/> </td>
+		</tr>
+		<tr>
+				<td width=15%> Skillset: </td>
+				<td width=35%> <input type=checkbox id="C++" name="C++" value="C++" />  C++ 
+							<input type=checkbox id="Py" name="Py" value="Py" /> Python 
+							<input type=checkbox id="JS" name="JS" value="JS" /> JavaScript 
+							<input type=checkbox id="HTML" name="HTML" value="HTML" /> HTML </td>
+		</tr>
+		<tr>
+				<td width=15%> Userid: </td>
+				<td width=35%> <input type="text" name="user" id="user" /> </td>
+		</tr>
+		<tr>
+				<td width=15%> Password: </td>
+				<td width=35%> <input type="text" name="passwd" id="passwd" /> </td>
+		</tr>
+		<tr>
+				<td width=15%> Confirm Password: </td>
+				<td width=35%> <input type="text" name="confirmpwd" id="confirmpwd" /> </td>
+		</tr>
+		<tr>
+				<td colspan=2 align="center"> <input type="button" name="signup" id="signup" Value="Signup" onclick="javascript:confirm()"/></td>
+			
+		</tr>
+		<tr>
+				<td colspan=2 align="center"> <button name="reset" id="reset" >Reset</button ></td>
+			
+		</tr>
+	</table>
+	</center>
+</body>
+</html>
